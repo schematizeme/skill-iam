@@ -43,6 +43,9 @@ Condições (ABAC) por *conditional tuple*. Antes de usar, valide o modelo com o
 - Endpoint de listagem que filtra depois de buscar tudo (vaza contagem/existência): use `ListObjects`/consulta já filtrada.
 - Authz "temporária" sem dono nem prazo. Admin global da plataforma é um tenant/role como os outros, com auditoria reforçada e step-up.
 
+Pagamento: a decisão "quem pode estornar/cobrar/sacar" é authz como qualquer outra (Check no PEP); o
+que é ação financeira e exige step-up é da `schematize-payments`.
+
 ## 5. Contrato com os serviços
 
 O serviço declara, em tabela versionada no repo, `rota -> permissão -> objeto resolvido`. O gate de CI

@@ -3,7 +3,7 @@ name: schematize-iam
 metadata:
   version: 0.1.0
 description: >-
-  Broker de identidade auth.<domínio>: OIDC/OAuth 2.1 + PKCE, passkeys, 2FA baseline, sessão/refresh, ReBAC multi-tenant, recuperação. Use ao projetar/revisar login, token, IdP ou authz. Gates. Teste: schematize-pentest.
+  Broker de identidade: OIDC/OAuth 2.1 + PKCE, passkeys, 2FA, sessão, ReBAC multi-tenant, recuperação. Use ao projetar/revisar login, token, IdP ou authz. Gates. Teste: schematize-pentest.
 ---
 <!-- cross-skill: iam.md, iam-checklist.md, efeitos-externos.md, orquestracao.md -> schematize-engineering; iam-testing.md -> schematize-pentest -->
 
@@ -49,7 +49,8 @@ exaustivo por fase) e aponta para cá.
 | Piso geral de IAM (princípios-âncora, checklist da DoD), checklist exaustivo F0-F6 e o `/eng-iam` | `schematize-engineering` | `schematize-engineering → references/iam.md`, `iam-checklist.md` |
 | **Desenho do broker:** topologia, OIDC/OAuth 2.1/PKCE, tokens e JWKS, fatores, passkeys, sessão, ReBAC, recuperação, risco | **esta skill** | `references/*.md` abaixo |
 | Testar o IAM: cross-tenant, priv-esc, abuso de fluxo, reachability, gate F6 | `schematize-pentest` | `schematize-pentest → references/iam-testing.md`, `/pentest-iam`, `/pentest-authz` |
-| Contrato HTTP de authz e de erro (escopos no OpenAPI, `problem+json`, 401/403/404) | `schematize-api` | esta skill define a regra, a api publica o contrato |
+| Contrato HTTP de authz e de erro (escopos no OpenAPI, `problem+json`, 401/403/404) | `schematize-api` | esta skill define a regra, a api publica o contrato (`schematize-api → references/contrato-rest.md`) |
+| Pagamento: quais ações financeiras exigem step-up e papel por tenant | `schematize-payments` | aqui o **como** do step-up (AAL, `max_age`); lá o **onde** |
 | Cliente web (BFF, formulários do front de auth, passkey no browser) | `schematize-web` | `/web-iam` |
 | Cliente mobile (OIDC/PKCE nativo, Keychain/Keystore, passkey nativa) | `schematize-mobile` | `schematize-mobile → /mobile-auth` |
 | Implementação do IdP em Go, Rust, Elixir, C#, Ruby, Zig | skill da linguagem | `/go-iam`, `/rust-iam`, `/elixir-iam`, `/cs-iam`, `/ruby-iam`, `/zig-iam` |

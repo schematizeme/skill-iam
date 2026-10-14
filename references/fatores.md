@@ -78,3 +78,7 @@ Rotas sensíveis declaram o AAL mínimo e a idade máxima da autenticação (`ma
 `insufficient_user_authentication` (RFC 9470) com o `acr`/`max_age` exigidos; o cliente leva o usuário ao
 broker, que pede o fator forte na hora (e deixa enrolar um, verificado pelo Email OTP). O token novo
 carrega `aal` e `auth_time`.
+
+Ação financeira (cobrança, estorno, troca de conta de recebimento, saque) é o caso típico de step-up:
+`schematize-payments` define **quais** ações exigem fator forte e papel por tenant; aqui fica o **como**
+(AAL, `max_age`, RFC 9470).

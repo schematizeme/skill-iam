@@ -15,4 +15,4 @@ argument-hint: "<serviço ou diretório>"
 5. **PDP fail-closed:** erro/timeout/motor fora = deny + log + alerta; sem cache positivo além do TTL.
 6. **Auditoria:** cada decisão loga quem, o quê, allow/deny, política, `trace_id`.
 7. **Prove:** teste de recurso de outro tenant (negado), de papel baixo em ação alta (negado), de revogação (tupla removida no
-   motor junto com o banco). A suíte agressiva é da `schematize-pentest` (`/pentest-authz`); o contrato HTTP dos erros, da `schematize-api`.
+   motor junto com o banco). A suíte agressiva é da `schematize-pentest` (`/pentest-authz`); o contrato HTTP dos erros (401/403/404, RFC 9457), da `schematize-api → references/contrato-rest.md`.

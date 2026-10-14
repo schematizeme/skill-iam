@@ -3,6 +3,14 @@
 Todas as mudanças relevantes deste pacote, no formato [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/),
 com versionamento [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.2.0] — 2026-10-14
+Integração ao catálogo: orçamento de description e ponteiros entre as irmãs novas.
+
+### Alterado
+- `description` <=190 (orçamento do catálogo).
+- Ponteiros: step-up em ação financeira -> `schematize-payments` (fatores.md, authz-rebac.md, fronteira); authz do contrato -> `schematize-api → references/contrato-rest.md`.
+- Motivo: o catálogo estourou o orçamento de listagem com 45 skills; cada fronteira aponta a dona em vez de duplicar.
+
 ## [0.1.0] — 2026-10-14
 Primeira versão. O desenho do broker `auth.<domínio>` vivia espalhado: o piso na `schematize-engineering`
 (`references/iam.md`), o cliente na web, a implementação em cada linguagem e o teste no pentest, sem uma skill
