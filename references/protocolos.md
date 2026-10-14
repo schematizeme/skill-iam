@@ -58,3 +58,5 @@ Dona: `schematize-iam`. Estado dos padrões e versões: `references/stack-versoe
 `implicit-flow`, `ropc-grant`, `pkce-ausente`, `pkce-plain`, `redirect-curinga`, `jwt-none`,
 `jwt-sem-verificacao`, `jwt-segredo-fraco`, `jwt-simetrico` (aviso), `chave-privada-no-repo`. O que
 o gate não lê (allowlist de `aud`, rotação de `kid`, tempo de vida do `code`) vai para `/iam-review`.
+
+Vincular a conta do usuário ao bot por OAuth (Entrar com Discord/Slack): identidade do bot ≠ do usuário; ver `schematize-bots → references/credenciais-e-token.md`.
